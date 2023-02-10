@@ -185,7 +185,7 @@ static void doCpuTransfer(Tmio *const regs, const u16 cmd, u32 *buf, const u32 *
 
 				blockCount--;
 			}
-			else __wfi();
+			else swiHalt();
 		}
 	}
 	else
@@ -207,7 +207,7 @@ static void doCpuTransfer(Tmio *const regs, const u16 cmd, u32 *buf, const u32 *
 
 				blockCount--;
 			}
-			else __wfi();
+			else swiHalt();
 		}
 	}
 }
