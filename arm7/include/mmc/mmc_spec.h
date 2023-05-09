@@ -1,6 +1,7 @@
 #pragma once
 
 // SPDX-License-Identifier: MIT
+// Copyright (c) 2023 profi200
 
 // Based on JEDEC eMMC Card Product Standard V4.41.
 

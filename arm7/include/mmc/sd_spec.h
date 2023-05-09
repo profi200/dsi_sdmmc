@@ -1,6 +1,7 @@
 #pragma once
 
 // SPDX-License-Identifier: MIT
+// Copyright (c) 2023 profi200
 
 // Based on SD specification version 8.00.
 
