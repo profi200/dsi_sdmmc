@@ -202,7 +202,7 @@ u32 SDMMC_getSectors(const u8 devNum);
  * @return     Returns SDMMC_ERR_NONE on success or
  *             one of the errors listed above on failure.
  */
-u32 SDMMC_readSectors(const u8 devNum, u32 sect, u32 *const buf, const u16 count);
+u32 SDMMC_readSectors(const u8 devNum, u32 sect, void *const buf, const u16 count);
 
 /**
  * @brief      Writes one or more sectors to a (e)MMC/SD card device.
@@ -215,7 +215,7 @@ u32 SDMMC_readSectors(const u8 devNum, u32 sect, u32 *const buf, const u16 count
  * @return     Returns SDMMC_ERR_NONE on success or
  *             one of the errors listed above on failure.
  */
-u32 SDMMC_writeSectors(const u8 devNum, u32 sect, const u32 *const buf, const u16 count);
+u32 SDMMC_writeSectors(const u8 devNum, u32 sect, const void *const buf, const u16 count);
 
 /**
  * @brief      Sends a custom command to a (e)MMC/SD card device.

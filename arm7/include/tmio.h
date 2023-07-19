@@ -289,7 +289,7 @@ typedef struct
 	u16 sd_clk_ctrl;
 	u16 sd_blocklen; // Also sd_blocklen32.
 	u16 sd_option;
-	u32 *buf;
+	void *buf;
 	u16 blocks;
 	u32 resp[4];     // Little endian, MSB first.
 } TmioPort;
@@ -329,12 +329,11 @@ bool TMIO_cardDetected(void);
 bool TMIO_cardWritable(void);
 
 /**
- * @brief      Outputs a continuous clock for initialization.
+ * @brief      Handles the device specific powerup sequence including the 74 clocks.
  *
  * @param      port  A pointer to the port struct.
- * @param[in]  clk   The target clock in Hz. Usually 400 kHz.
  */
-void TMIO_startInitClock(TmioPort *const port, const u32 clk);
+void TMIO_powerupSequence(TmioPort *const port);
 
 /**
  * @brief      Sends a command.
@@ -362,7 +361,7 @@ __attribute__((always_inline)) static inline void TMIO_setClock(TmioPort *const 
  * @brief      Sets the transfer block length for a tmio port.
  *
  * @param      port      A pointer to the port struct.
- * @param[in]  blockLen  The block length.
+ * @param[in]  blockLen  The block length. Caution: Provide a buffer with multiple of 4 size regardless of block length.
  */
 __attribute__((always_inline)) static inline void TMIO_setBlockLen(TmioPort *const port, u16 blockLen)
 {
@@ -390,7 +389,7 @@ __attribute__((always_inline)) static inline void TMIO_setBusWidth(TmioPort *con
  * @param      buf     The buffer pointer.
  * @param[in]  blocks  The number of blocks to transfer.
  */
-__attribute__((always_inline)) static inline void TMIO_setBuffer(TmioPort *const port, u32 *buf, const u16 blocks)
+__attribute__((always_inline)) static inline void TMIO_setBuffer(TmioPort *const port, void *buf, const u16 blocks)
 {
 	port->buf    = buf;
 	port->blocks = blocks;
