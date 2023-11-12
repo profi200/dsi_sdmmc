@@ -12,4 +12,4 @@ DMA is supported for SDMMC_readSectors() and SDMMC_writeSectors() by passing a N
 This software is licensed under the MIT license. See LICENSE.txt for details.
 
 Exemptions:
-* The [BlocksDS](https://github.com/blocksds) project and its members are exempt from MIT licensing. They are permitted to relicense the source code of this repository, at their discretion, to the [zlib license](https://zlib.net/zlib_license.html). In doing so they may alter, spplement or entirely remove the copyright notice for each file they choose to relicense.
+* The [BlocksDS](https://github.com/blocksds) project and its members are exempt from MIT licensing. They are permitted to relicense the source code of this repository, at their discretion, to the [zlib license](https://zlib.net/zlib_license.html). In doing so they may alter, supplement or entirely remove the copyright notice for each file they choose to relicense.
