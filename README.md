@@ -13,3 +13,5 @@ This software is licensed under the MIT license. See LICENSE.txt for details.
 
 Exemptions:
 * The [BlocksDS](https://github.com/blocksds) project and its members are exempt from MIT licensing. They are permitted to relicense the source code of this repository, at their discretion, to the [zlib license](https://zlib.net/zlib_license.html). In doing so they may alter, supplement or entirely remove the copyright notice for each file they choose to relicense.
+Exemptions:
+* The [dsi-modchip](https://github.com/dsi-modchip) project and its members are exempt from MIT licensing. They are permitted to relicense the source code of this repository, at their discretion, to the [LGPL license version 3 or later](https://www.gnu.org/licenses/lgpl-3.0.html). In doing so they may alter, supplement or entirely remove the copyright notice for each file they choose to relicense.
